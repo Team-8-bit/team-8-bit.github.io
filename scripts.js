@@ -22,4 +22,14 @@ function closeNav() {
     document.getElementById("sidenav").style.width = "0";
 }
 
+function popup(name) {
+    var popup = document.getElementById("popup-" + name);
+    var background = document.getElementById("popup-background");
+    var body = document.body;
+    background.classList.toggle("visible")
+    popup.classList.toggle("show");
+    body.classList.toggle("noscroll");
+    popup.classList.toggle("slideout");
+}
+
 window.addEventListener("scroll", reveal);
